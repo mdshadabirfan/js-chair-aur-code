@@ -33,4 +33,22 @@ get the first element of specified h, class, id
 5. const myUl = document.querySelector("ul") => This will store the first ul in myUl variable
 6. myUl.querySelector("li") => This will select the firs li of myUl
 7. const greenListItem = myUl.querySelector("li") => This will store the first li of the myUl in greenListItem
-8. greenListItem.style.backgroundColor = "green" => This will turn the color of the first li of myUl to green*/ 
+8. greenListItem.style.backgroundColor = "green" => This will turn the color of the first li of myUl to green
+
+
+Select all the elements with specified property with querySelectorAll
+const tempList = document.querySelectorAll("li");//This will store all the li in tempList in the form of Array
+tempList.style.backgroundColor = "green" => This will throw error as we have mention which index of the array have to be styled
+tempList[0].style.backgroundColor = "green" => This will change the background color of the first li element to green
+
+
+getElementsByClassName => picking all the elements by their class name => Return a HTML collection => Not an Array => Has to convert the collection in an array to apply forEach
+
+1. const tempList = document.getElementsByClassName("list-item");
+2. console.log(tempList) => prints an array with the list-items
+3. const convertedArray =  Array.from(tempList) => Converting the collection to an array and then storing it in convertedArray
+4. convertedArray.forEach( (listItem) => {
+    listItem.style.color = "yellow";
+    }) => This will change the color of all listItem to yellow
+5. convertedArray[0].innerText = "Shadab"; => Change the first list item's text to Shadab
+*/ 
